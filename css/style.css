@@ -4,6 +4,10 @@ html {
   box-sizing: border-box;
   overflow-x: hidden;
 }
+
+html {
+  scroll-behavior: smooth;
+}
 :root {
   /*theme colors*/
   --text-grey: #3f4954;
