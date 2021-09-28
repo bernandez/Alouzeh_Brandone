@@ -67,3 +67,44 @@ function fetchUser() {
         });
 }
 fetchUser()
+// Toggle
+const toggleBtn = document.querySelector('.nav-toggle')
+const navBar = document.querySelector('.links')
+
+toggleBtn.addEventListener('click', function(){
+    navBar.classList.toggle('show-links')
+})
+
+// tap buttons
+const about = document.querySelector(".about-container");
+const btns = document.querySelectorAll(".tab-btn");
+const articles = document.querySelectorAll(".content");
+console.log(btns);
+
+about.addEventListener('click', function(e){
+    const id = e.target.dataset.id
+    console.log(id);
+    
+    if (id){
+        btns.forEach(function(btn){
+            btn.classList.remove('active')
+            e.target.classList.add('active')
+        })
+    }
+    articles.forEach(function(article){
+        article.classList.remove('active')
+        const element = document.getElementById(id)
+        element.classList.add('active')
+    })
+})
+
+const topLink = document.querySelector('.top-link');
+window.addEventListener('scroll', function(){
+    const scrollHeight = window.pageYOffset;
+    console.log(scrollHeight);
+    if ( scrollHeight > 300){
+        topLink.classList.add('show-link')
+    }else{
+        topLink.classList.remove("show-link")
+    }
+})

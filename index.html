@@ -11,59 +11,71 @@
 </head>
 <body>
     <header>
-        <nav class="nav"> 
-            <div class="nav-menu flex-row">
-                <div class="nav-brand">
-                    <a href="#" class="text-gray">Montero</a>
-                </div>
-                <div class="toggle-collapse">
-                    <div class="toggle-icons">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                </div>
-                <div>
-                    <ul class="nav-items">
-                        <li class="nav-link">
-                            <a href="#header">Home</a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#profile">About</a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#services">Services</a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#work">Work</a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#blog">Blog</a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="social text-gray">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                </div>
+        <div class="nav-center fixed-nav">
+            <div class="nav-header">
+                <img src="./logo.svg" alt="">
+                <button class="nav-toggle">
+                    <i class="fas fa-bars">n-b</i>
+                </button>
             </div>
-       </nav>
+            <!-- links -->
+            <ul class="links">
+                <li>
+                    <a href="#home">home</a>
+                </li>
+                <li>
+                    <a href="#about">about</a>
+                </li>
+                <li>
+                    <a href="#services">services</a>
+                </li>
+                <li>
+                    <a href="#work">work</a>
+                </li>
+                <li>
+                    <a href="#blog">blog</a>
+                </li>
+                <li>
+                    <a href="#contact">contact</a>
+                </li>
+            </ul>
+            <!-- social media -->
+            <ul class="social-icons">
+                <li>
+                    <a href="https://www.twitter.com">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com">
+                        <i class="fab fa-behance"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
        <!--nav end-->
     </header>
     <main>
         <!--site title-->
-        <section class="site-title header">
-            <div class="site-background" data-aos="fade-up" data-aos-delay="100">
+        <section class="site-title header" id="home">
+            <div class="site-background">
                 <h1>Alouzeh Brandone</h1>
                 <h3>Data Science</h3>
                 <button class="btn">Contact Me</button>
             </div>
         </section>
         <!--About Me and Skills-->
-        <section id="profile">
+        <section id="about">
             <div class="about">
                 <div class="profile-img">
                     <img src="./img/montero-pic.jpg" alt="profile-img">
@@ -76,37 +88,86 @@
                             quam magni laudantium neque esse, sint fuga harum commodi corporis id recusandae eligendi dolorem 
                             cumque minima odio, cupiditate error sunt iste sed. Reiciendis.</p>
                     </div>
-                    <div class="myprogress">
-                        <div>
-                            <h3>My Skills</h3>
+                    <article class="about-container">
+                        <div class="btn-container">
+                            <button class="tab-btn active" data-id="info">Info</button>
+                            <button class="tab-btn" data-id="skills">Skills</button>
+                            <button class="tab-btn" data-id="experience">Experience</button>
+                            <button class="tab-btn" data-id="education">Education</button>
                         </div>
-                        <div>
-                            <div class="mybar">
-                                <p>HTML</p>
-                                <div class="container">
-                                    <div class="skills html">90%</div>
+                        <article >
+                            <div class="content active" id="info">
+                                <h3> Info</h3>
+                                <div>
+                                    <p>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi 
+                                        laboriosam ad expedita culpa non at laborum, hic nihil rem illo 
+                                        dolorem voluptate earum inventore accusamus adipisci 
+                                        dolorem voluptate earum inventore accusamus adipisci 
+                                        dolorem voluptate earum inventore accusamus adipisci 
+                                        laudantium. Facere, voluptas fuga.
+                                    </p>
                                 </div>
                             </div>
-                            <div class="mybar">
-                                <p>CSS</p>
-                                <div class="container">
-                                    <div class="skills css">50%</div>
+                            <div class="content myprogress" id="skills">
+                                <div>
+                                    <h3>My Skills</h3>
+                                </div>
+                                <div>
+                                    <div class="mybar">
+                                        <p>HTML</p>
+                                        <div class="container">
+                                            <div class="skills html">90%</div>
+                                        </div>
+                                    </div>
+                                    <div class="mybar">
+                                        <p>CSS</p>
+                                        <div class="container">
+                                            <div class="skills css">50%</div>
+                                        </div>
+                                    </div>
+                                    <div class="mybar">
+                                        <p> Java</p>
+                                        <div class="container">
+                                            <div class="skills java">25%</div>
+                                        </div>
+                                    </div>
+                                    <div class="mybar">
+                                        <p> Python</p>
+                                        <div class="container">
+                                            <div class="skills python">90%</div>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+                            <div class="content " id="experience">
+                                <h3> experience</h3>
+                                <div>
+                                    <p>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi
+                                        laboriosam ad expedita culpa non at laborum, hic nihil rem illo
+                                        dolorem voluptate earum inventore accusamus adipisci
+                                        dolorem voluptate earum inventore accusamus adipisci
+                                        dolorem voluptate earum inventore accusamus adipisci
+                                        laudantium. Facere, voluptas fuga.
+                                    </p>
                                 </div>
                             </div>
-                            <div class="mybar">
-                                <p> Java</p>
-                                <div class="container">
-                                    <div class="skills java">25%</div>
+                            <div class="content " id="education">
+                                <h3> education</h3>
+                                <div>
+                                    <p>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi
+                                        laboriosam ad expedita culpa non at laborum, hic nihil rem illo
+                                        dolorem voluptate earum inventore accusamus adipisci
+                                        dolorem voluptate earum inventore accusamus adipisci
+                                        dolorem voluptate earum inventore accusamus adipisci
+                                        laudantium. Facere, voluptas fuga.
+                                    </p>
                                 </div>
                             </div>
-                            <div class="mybar">
-                                <p> Python</p>
-                                <div class="container">
-                                    <div class="skills python">90%</div>
-                                </div>
-                            </div>
-                        </div>    
-                    </div>
+                        </article>
+                    </article>
                     <div class="about-btn">
                         <button class="btn ">
                             <i class="fas fa-download"></i>
@@ -308,6 +369,9 @@
             </p>
         </div>
     </footer>
+    <a href="#home" class="scroll-link top-link">
+        <i class="fas fa-arrow-up"></i>
+    </a>
     <script src="./js/main.js">
     </script>
 </body>
