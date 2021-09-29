@@ -1,4 +1,10 @@
+// preloader
+const preloader = document.querySelector(".preloader");
 
+window.addEventListener("load", function () {
+  preloader.classList.add("hide-preloader");
+})
+/*
 const user_img = document.querySelector(".profile");
 const userName = document.querySelector(".user-name");
 const name = document.querySelector(".name");
@@ -67,6 +73,7 @@ function fetchUser() {
         });
 }
 fetchUser()
+*/
 // Toggle
 
 // tap buttons
@@ -77,7 +84,7 @@ console.log(btns);
 
 about.addEventListener('click', function(e){
     const id = e.target.dataset.id
-    console.log(id);
+    //console.log(id);
     
     if (id){
         btns.forEach(function(btn){
@@ -95,7 +102,7 @@ about.addEventListener('click', function(e){
 const topLink = document.querySelector('.top-link');
 window.addEventListener('scroll', function(){
     const scrollHeight = window.pageYOffset;
-    console.log(scrollHeight);
+    //console.log(scrollHeight);
     if ( scrollHeight > 300){
         topLink.classList.add('show-link')
     }else{
@@ -104,17 +111,6 @@ window.addEventListener('scroll', function(){
 })
 
 
-// Element.getBoundingClientRect() method returns the size of an element and its position relative to the viewport.
-// pageYOffset is a read - only window property that returns the number of pixels the document has been scrolled vertically.
-// slice extracts a section of a string without modifying original string
-//offsetTop - A Number, representing the top position of the element, in pixels
-
-// ********** set date ************
-// select span
-// const date = document.getElementById("date");
-// date.innerHTML = new Date().getFullYear();
-
-// ********** close links ************
 const navToggle = document.querySelector(".nav-toggle");
 const linksContainer = document.querySelector(".links-container");
 const links = document.querySelector(".links");
@@ -148,8 +144,6 @@ window.addEventListener("scroll", function () {
   // setup back to top link
 
   if (scrollHeight > 500) {
-    console.log("helo");
-
     top_Link.classList.add("show-link");
   } else {
     top_Link.classList.remove("show-link");

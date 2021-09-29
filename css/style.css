@@ -108,6 +108,9 @@ nav {
 .fixed-nav .links a:hover {
   color: var(--clr-secondary);
 }
+.fixed-nav .nav-toggle {
+  padding-right: 3rem;
+}
 .fixed-nav .social-links a {
   color: var(--clr-grey-1);
 }
@@ -129,7 +132,6 @@ nav {
   border-color: transparent;
   transition: var(--transition);
   cursor: pointer;
-  padding-right: 3rem;
 }
 .nav-toggle:hover {
   color: var(--clr-secondary);
@@ -446,6 +448,7 @@ section .contact form .btn {
 }
 section .contact form .input {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -557,9 +560,6 @@ footer p {
   .nav .toggle-collapse {
     display: initial;
   }
-  section#github-profile .profile-info {
-    grid-template-columns: 50%, 50% !important;
-  }
   main .site-content,
   main section .about,
   section .service,
@@ -612,10 +612,38 @@ footer p {
   main .blog {
     height: 125vh;
   }
+  section#about {
+    width: 90%;
+  }
+  section#work,
+  section .contact,
+  section#blog .site-content {
+    width: 95%;
+  }
   .site-content .post-content > .post-image .post-info {
     display: none;
   }
   .nav .toggle-collapse {
     width: 80%;
   }
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--clr-white);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
+  z-index: 999;
+  transition: var(--transition);
+}
+
+.hide-preloader {
+  z-index: -999;
+  visibility: hidden;
 }
