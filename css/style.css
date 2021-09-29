@@ -129,6 +129,7 @@ nav {
   border-color: transparent;
   transition: var(--transition);
   cursor: pointer;
+  padding-right: 3rem;
 }
 .nav-toggle:hover {
   color: var(--clr-secondary);
