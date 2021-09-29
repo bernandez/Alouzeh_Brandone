@@ -136,8 +136,16 @@ nav {
 .nav-toggle:hover {
   color: var(--clr-secondary);
 }
+
 .logo {
-  height: 50px;
+  margin: 0;
+  color: #49a6e9;
+}
+.logo span {
+  color: var(--clr-white);
+}
+.fixed-nav .logo span {
+  color: var(--bg-color);
 }
 .links-container {
   height: 0;
@@ -422,9 +430,22 @@ section .works .works-info {
   display: flex;
   margin: auto;
 }
+section .works .works-info a {
+  padding: 50px 0;
+  font-size: 30px;
+  color: var(--midnight);
+}
+section .works .works-info h3,
+section .works .works-info h5 {
+  margin: 5px;
+}
+section .works .works-info div {
+  flex-grow: 1;
+}
 section .works-info img {
   padding: 5px;
   width: 250px;
+  background-color: #0f0f0f;
 }
 section .contact {
   width: 70%;
