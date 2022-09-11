@@ -38,6 +38,9 @@ html {
   --Josefin: "Josefin", cursive;
   --Lexend: "Lexend", cursive;
   --Livvic: "Livvic", cursive;
+  --tw-ring-offset-shadow: 0 0 transparent;
+  --tw-ring-shadow: 0 0 transparent;
+  --tw-shadow:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06);  
 }
 /* global classes*/
 a {
@@ -87,6 +90,7 @@ span {
 p {
   font-family: var(--Lexend);
   color: var(--text-light);
+  font-weight: 300;
 }
 /* navbar */
 nav {
@@ -425,27 +429,49 @@ section .profile img {
   border-radius: 50%;
 }
 section .works .works-info {
-  padding: 20px;
-  flex-wrap: wrap;
-  display: flex;
+  /* padding: 20px; */
+  /* flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  grid-gap: 20px;
   margin: auto;
+  /* background-color: #0f0f0f; */
 }
 section .works .works-info a {
   padding: 50px 0;
   font-size: 30px;
   color: var(--midnight);
 }
-section .works .works-info h3,
+/* section .works .works-info h3,
 section .works .works-info h5 {
-  margin: 5px;
-}
-section .works .works-info div {
-  flex-grow: 1;
+  margin: 5px; 
+} */
+section .works .works-info .project{
+  /* flex-grow: 1; */
+  box-shadow: var(--tw-ring-offset-shadow,0 0 transparent),var(--tw-ring-shadow,0 0 transparent),var(--tw-shadow);
+  /* background-color: #2ce9fb; */
+  border-radius: 10px;
+  text-align: center;
+
 }
 section .works-info img {
-  padding: 5px;
-  width: 250px;
-  background-color: #0f0f0f;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  
+}
+section .works .works-info .project h2{
+  font-size: 20px;
+}
+section .works .works-info .project button a{
+  font-size: 16px; 
+  color: white;}
+section .works .works-info .project button{
+  border: 1px solid #49a6e9;
+  background-color: #49a6e9;
+  padding: 10px 15px;
+  border-radius: 55px;
+  margin-bottom: 10px;
 }
 section .contact {
   width: 70%;
